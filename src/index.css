@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  --amazon-black: #131921;
+  --amazon-text: #adafb8;
+}
+
+@theme {
+  --color-amazon-black: var(--amazon-black);
+  --color-amazon-text: var(--amazon-text);
+}
