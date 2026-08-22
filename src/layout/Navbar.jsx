@@ -9,40 +9,22 @@ import { Heart, ShoppingCart, User } from "lucide-react";
 const Navbar = () => {
   return (
     <>
-      {/* <nav className="flex justify-between  max-w-360 mx-auto">
-        <div className="py-6">
-          <Link to="/">
-            <img
-              src={placeholderLogo}
-              alt="logo"
-              className="w-24 md:w-32 h-auto"
-            />
-          </Link>
-        </div>
-        <div className="border-2 grow ">
-          <SearchBar />
-        </div>
-        <div className="flex gap-4 items-center">
-          <div className="flex items-center space-x-2">
-            <span>
-              <User />
-            </span>
-            <span>Marshal</span>
-          </div>
-          <div className="">
-            <Link>
-              <Heart />
-            </Link>
-          </div>
-          <div className="">
-            <Link>
-              <ShoppingCart />
-            </Link>
-          </div>
-        </div>
-      </nav> */}
+      <nav
+        className="
+    mx-auto max-w-360
+    grid
+    grid-cols-[auto_1fr]
+    items-center
+    gap-x-4
+    px-4
 
-      <nav className="mx-auto max-w-360 grid grid-cols-[auto_1fr_auto] items-center gap-4 px-4 lg:px-0">
+    md:grid-cols-[auto_1fr_auto]
+    md:gap-4
+
+    lg:px-0
+  "
+      >
+        {/* Logo */}
         <div className="py-6">
           <Link to="/">
             <img
@@ -52,12 +34,43 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <SearchBar />
-        <div className="flex items-center gap-4">
+
+        {/* Search */}
+        <div
+          className="
+      col-span-2
+      row-start-2
+      w-full
+      pb-4
+
+      md:col-span-1
+      md:row-start-1
+      md:col-start-2
+      md:pb-0
+    "
+        >
+          <SearchBar />
+        </div>
+
+        {/* Actions */}
+        <div
+          className="
+      col-start-2
+      row-start-1
+      flex
+      items-center
+      justify-end
+      gap-4
+
+      md:col-start-3
+      md:row-start-1
+    "
+        >
           <Link to="/account" className="flex items-center gap-2">
             <User />
-            <span>Marshal</span>
+            <span className="hidden sm:inline">Marshal</span>
           </Link>
+
           <Link to="/wishlist" aria-label="Wishlist">
             <Heart />
           </Link>
