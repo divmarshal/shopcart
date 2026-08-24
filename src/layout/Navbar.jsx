@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import logo2 from "../assets/logo2.png";
 import placeholderLogo from "../assets/placeholderLogo.png";
 import { Link } from "react-router";
-import { Heart, ShoppingCart, User } from "lucide-react";
+import { EllipsisVertical, Heart, ShoppingCart, User } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -78,6 +78,10 @@ const Navbar = () => {
           <Link to="/cart" aria-label="Shopping cart">
             <ShoppingCart />
           </Link>
+
+          <button className="inline md:hidden" aria-label="More options">
+            <EllipsisVertical />
+          </button>
         </div>
       </nav>
     </>
