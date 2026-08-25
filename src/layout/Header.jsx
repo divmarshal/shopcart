@@ -1,8 +1,8 @@
 import { X } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router";
 
-const Header = () => {
+const Header = ({ isMenuOpen, onMenuClose }) => {
   const navLinkClass = ({ isActive }) =>
     isActive
       ? "text-amazon-text border-b-2 border-amazon-text py-4"
@@ -30,19 +30,72 @@ const Header = () => {
 
       {/* Mobile view */}
 
-      <div className="md:hidden flex flex-col py-2 px-6 text-2xl text-start font-bold min-h-dvh">
-        <button className="ml-auto cursor-pointer">
+      {/* {isMenuOpen && (
+        <div className="md:hidden flex flex-col py-2 px-6 text-2xl text-start font-bold min-h-dvh">
+          <button
+            className="ml-auto cursor-pointer"
+            onClick={onMenuClose}
+            aria-label="Close menu"
+          >
+            <X size={32} />
+          </button>
+          <NavLink to="/" className="py-2">
+            Home
+          </NavLink>
+          <NavLink to="/blog" className="py-2">
+            Blog
+          </NavLink>
+          <NavLink to="/contact" className="py-2">
+            Contact
+          </NavLink>
+          <NavLink to="/about" className="py-2">
+            About
+          </NavLink>
+        </div>
+      )} */}
+
+      <div
+        className={`
+    fixed
+    inset-y-0
+    left-0
+    z-50
+    w-full
+    bg-white
+    flex
+    flex-col
+    py-2
+    px-6
+    text-2xl
+    text-start
+    font-bold
+    transition-transform
+    duration-300
+    ease-in-out
+    md:hidden
+    ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
+  `}
+      >
+        <button
+          className="ml-auto cursor-pointer"
+          onClick={onMenuClose}
+          aria-label="Close menu"
+        >
           <X size={32} />
         </button>
+
         <NavLink to="/" className="py-2">
           Home
         </NavLink>
+
         <NavLink to="/blog" className="py-2">
           Blog
         </NavLink>
+
         <NavLink to="/contact" className="py-2">
           Contact
         </NavLink>
+
         <NavLink to="/about" className="py-2">
           About
         </NavLink>

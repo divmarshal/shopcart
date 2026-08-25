@@ -6,7 +6,7 @@ import placeholderLogo from "../assets/placeholderLogo.png";
 import { Link } from "react-router";
 import { EllipsisVertical, Heart, ShoppingCart, User } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ onMenuOpen }) => {
   return (
     <>
       <nav
@@ -79,7 +79,11 @@ const Navbar = () => {
             <ShoppingCart />
           </Link>
 
-          <button className="inline md:hidden" aria-label="More options">
+          <button
+            className="inline md:hidden"
+            aria-label="More options"
+            onClick={onMenuOpen}
+          >
             <EllipsisVertical />
           </button>
         </div>
