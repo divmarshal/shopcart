@@ -30,30 +30,6 @@ const Header = ({ isMenuOpen, onMenuClose }) => {
 
       {/* Mobile view */}
 
-      {/* {isMenuOpen && (
-        <div className="md:hidden flex flex-col py-2 px-6 text-2xl text-start font-bold min-h-dvh">
-          <button
-            className="ml-auto cursor-pointer"
-            onClick={onMenuClose}
-            aria-label="Close menu"
-          >
-            <X size={32} />
-          </button>
-          <NavLink to="/" className="py-2">
-            Home
-          </NavLink>
-          <NavLink to="/blog" className="py-2">
-            Blog
-          </NavLink>
-          <NavLink to="/contact" className="py-2">
-            Contact
-          </NavLink>
-          <NavLink to="/about" className="py-2">
-            About
-          </NavLink>
-        </div>
-      )} */}
-
       <div
         className={`
     fixed
@@ -84,19 +60,19 @@ const Header = ({ isMenuOpen, onMenuClose }) => {
           <X size={32} />
         </button>
 
-        <NavLink to="/" className="py-2">
+        <NavLink to="/" className="py-2" onClick={onMenuClose}>
           Home
         </NavLink>
 
-        <NavLink to="/blog" className="py-2">
+        <NavLink to="/blog" className="py-2" onClick={onMenuClose}>
           Blog
         </NavLink>
 
-        <NavLink to="/contact" className="py-2">
+        <NavLink to="/contact" className="py-2" onClick={onMenuClose}>
           Contact
         </NavLink>
 
-        <NavLink to="/about" className="py-2">
+        <NavLink to="/about" className="py-2" onClick={onMenuClose}>
           About
         </NavLink>
       </div>
