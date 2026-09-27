@@ -4,15 +4,17 @@ import Category from "./category/Category";
 import HotSellersIndiaSection from "./HotSellersIndiaSection";
 import HotSellersProductCard from "./HotSellersProductCard";
 import HotSellersBanner from "./HotSellersBanner";
+import CategoryCard from "./category/CategoryCard";
 
 const Home = () => {
   return (
     <>
       <HeroBannerCarousel />
       <Category />
-      <HotSellersIndiaSection />
+      <CategoryCard />
+      {/* <HotSellersIndiaSection /> */}
       {/* <HotSellersProductCard /> */}
-      <HotSellersBanner />
+      {/* <HotSellersBanner /> */}
     </>
   );
 };
