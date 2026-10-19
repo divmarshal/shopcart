@@ -3,9 +3,11 @@
 :root {
   --amazon-black: #131921;
   --amazon-text: #adafb8;
+  --text-gray: #878787;
 }
 
 @theme {
   --color-amazon-black: var(--amazon-black);
   --color-amazon-text: var(--amazon-text);
+  --color-text-gray: var(--text-gray);
 }
