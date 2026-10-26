@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryFilters from "./CategoryFilters";
+import BrandFilters from "./BrandFilters";
 
 const Filters = () => {
   return (
@@ -14,6 +15,7 @@ const Filters = () => {
       </div> */}
 
       <CategoryFilters />
+      <BrandFilters />
     </aside>
   );
 };
