@@ -36,7 +36,7 @@ const BrandFilters = () => {
       {/* Brand options */}
       <div className="">
         <form action="" className="w-full">
-          {brands.map((brand) => (
+          {brands?.map((brand) => (
             <div key={brand} className="flex items-center gap-2 py-2">
               <input
                 type="checkbox"
