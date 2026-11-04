@@ -2,6 +2,7 @@ import React from "react";
 import CategoryFilters from "./CategoryFilters";
 import BrandFilters from "./BrandFilters";
 import ColorFilters from "./ColorFilters";
+import PriceFilters from "./PriceFilters";
 
 const Filters = () => {
   return (
@@ -18,6 +19,7 @@ const Filters = () => {
       <CategoryFilters />
       <BrandFilters />
       <ColorFilters />
+      <PriceFilters />
     </aside>
   );
 };
