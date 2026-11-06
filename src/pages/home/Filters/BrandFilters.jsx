@@ -29,7 +29,7 @@ const BrandFilters = () => {
           name="brandSearch"
           placeholder="Search Brand"
           aria-label="Search brands"
-          className="w-full  py-1 pr-8 text-sm outline-none "
+          className="w-full  py-1 pr-8 text-sm outline-none"
         />
       </div>
 
@@ -43,9 +43,9 @@ const BrandFilters = () => {
                 id={brand}
                 name="brands"
                 value={brand}
-                className="text-blue-500 focus:ring-blue-500"
+                className="text-blue-500 focus:ring-blue-500 h-4.5 w-4.5"
               />
-              <label htmlFor={brand} className="text-sm text-gray-700">
+              <label htmlFor={brand} className="text-base text-gray-900">
                 {brand}
               </label>
             </div>

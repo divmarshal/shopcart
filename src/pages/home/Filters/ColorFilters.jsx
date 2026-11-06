@@ -17,9 +17,9 @@ const ColorFilters = () => {
                 id={color}
                 name="colors"
                 value={color}
-                className="text-blue-500 focus:ring-blue-500"
+                className="text-blue-500 focus:ring-blue-500 h-4.5 w-4.5"
               />
-              <label htmlFor={color} className="text-sm text-gray-700">
+              <label htmlFor={color} className=" text-base text-gray-900">
                 {color}
               </label>
             </div>

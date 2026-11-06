@@ -3,6 +3,7 @@ import CategoryFilters from "./CategoryFilters";
 import BrandFilters from "./BrandFilters";
 import ColorFilters from "./ColorFilters";
 import PriceFilters from "./PriceFilters";
+import CustomerRatings from "./CustomerRatings";
 
 const Filters = () => {
   return (
@@ -20,6 +21,7 @@ const Filters = () => {
       <BrandFilters />
       <ColorFilters />
       <PriceFilters />
+      <CustomerRatings />
     </aside>
   );
 };
